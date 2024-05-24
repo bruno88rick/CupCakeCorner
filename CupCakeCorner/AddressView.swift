@@ -27,7 +27,7 @@ struct AddressView: View {
             
             Section {
                 Toggle(isOn: $saveAddressOnCache, label: {
-                    Text("Save Address to future orders?")
+                    Text("Save this Order and Address to use latter?")
                 })
             }
             
@@ -55,7 +55,7 @@ struct AddressView: View {
         }
         .onDisappear {
             if !saveAddressOnCache {
-                if let savedAddress = UserDefaults.standard.data(forKey: "address") {
+                if UserDefaults.standard.data(forKey: "address") != nil {
                     UserDefaults.standard.removeObject(forKey: "address")
                 }
             }

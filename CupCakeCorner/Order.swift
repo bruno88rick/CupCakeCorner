@@ -49,7 +49,9 @@ class Order: Codable {
     
     var hasValidAddress: Bool {
         
-        if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || streetAddress.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || city.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || zip.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        /*if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || streetAddress.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || city.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || zip.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {*/
+        // A better way
+        if name.isReallyEmptyAndJustWhiteSpace || streetAddress.isReallyEmptyAndJustWhiteSpace || city.isReallyEmptyAndJustWhiteSpace || zip.isReallyEmptyAndJustWhiteSpace {
             return false
         }
         return true
@@ -73,5 +75,20 @@ class Order: Codable {
             cost += Decimal(quantity)
         }
         return cost
+    }
+    
+    func loadLastOrder() -> String {
+        if let savedItems = UserDefaults.standard.data(forKey: "address") {
+            if let decodedItems = try? JSONDecoder().decode(Order.self, from: savedItems) {
+                type = decodedItems.type
+                quantity = decodedItems.quantity
+                specialRequestEnabled = decodedItems.specialRequestEnabled
+                extraFrosting = decodedItems.extraFrosting
+                addSprinkles = decodedItems.addSprinkles
+                return "Last order loaded sucessfully!"
+            }
+            return "Error loading saved order!"
+        }
+        return "No Saved order!"
     }
 }

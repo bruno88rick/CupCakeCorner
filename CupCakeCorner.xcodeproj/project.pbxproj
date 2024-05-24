@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B660C96E2C00B5E300EF1178 /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660C96D2C00B5E300EF1178 /* String-EmptyChecking.swift */; };
 		B66331562BFC8C6B008DE300 /* CupCakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66331552BFC8C6B008DE300 /* CupCakeCornerApp.swift */; };
 		B66331582BFC8C6B008DE300 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66331572BFC8C6B008DE300 /* ContentView.swift */; };
 		B663315A2BFC8C6F008DE300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66331592BFC8C6F008DE300 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B660C96D2C00B5E300EF1178 /* String-EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
 		B66331522BFC8C6B008DE300 /* CupCakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupCakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66331552BFC8C6B008DE300 /* CupCakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupCakeCornerApp.swift; sourceTree = "<group>"; };
 		B66331572BFC8C6B008DE300 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				B66331672BFCD65F008DE300 /* CheckOutView.swift */,
 				B66331652BFC95A7008DE300 /* AddressView.swift */,
 				B66331632BFC9087008DE300 /* Order.swift */,
+				B660C96D2C00B5E300EF1178 /* String-EmptyChecking.swift */,
 				B66331592BFC8C6F008DE300 /* Assets.xcassets */,
 				B663315B2BFC8C6F008DE300 /* Preview Content */,
 			);
@@ -150,6 +153,7 @@
 				B66331682BFCD65F008DE300 /* CheckOutView.swift in Sources */,
 				B66331662BFC95A7008DE300 /* AddressView.swift in Sources */,
 				B66331582BFC8C6B008DE300 /* ContentView.swift in Sources */,
+				B660C96E2C00B5E300EF1178 /* String-EmptyChecking.swift in Sources */,
 				B66331562BFC8C6B008DE300 /* CupCakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

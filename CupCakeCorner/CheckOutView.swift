@@ -82,8 +82,8 @@ struct CheckOutView: View {
             alertMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes in on its way!"
             showingAlert = true
         } catch {
-            alertTitle = "Sorry! There`s an Error on your Checkout"
-            alertMessage = error.localizedDescription
+            alertTitle = "Oops!"
+            alertMessage = "Erro on Checkout: \(error.localizedDescription)"
             showingAlert = true
             //print("Check out failed: \(error.localizedDescription)")
         }

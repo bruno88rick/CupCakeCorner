@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var order = Order()
+    @State private var showingAlert = false
+    @State private var alertMessage = " "
     
     var body: some View {
         NavigationStack {
@@ -47,6 +49,15 @@ struct ContentView: View {
                 
             }
             .navigationTitle("Cupcake Corner")
+            .toolbar {
+                Button ("Load Last Order") {
+                    alertMessage = order.loadLastOrder()
+                    showingAlert = true
+                }
+            }
+            .alert("Alert", isPresented: $showingAlert) { } message: {
+                Text(alertMessage)
+            }
         }
     }
 }
